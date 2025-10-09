@@ -14,4 +14,5 @@ class ProductController extends Controller
         // Kirim ke view
         return view('product', compact('hasil'));
     }
+    
 }

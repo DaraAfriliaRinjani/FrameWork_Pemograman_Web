@@ -5,11 +5,18 @@
                 {{ __('Dashboard') }}
             </h2>
 
-            <!-- Tombol ke halaman Product -->
-            <a href="{{ route('product.index') }}"
-               class="inline-flex items-center px-4 py-2 bg-indigo-600 text-white text-sm font-medium rounded-md shadow hover:bg-indigo-700 transition">
-                Lihat Produk
-            </a>
+            <!-- Tombol Ganjil & Genap -->
+            <div class="flex space-x-2">
+                <a href="{{ route('product.index', ['msg' => 'ganjil']) }}"
+                   class="px-4 py-2 bg-white border border-gray-300 text-gray-700 text-sm font-medium rounded-md shadow hover:bg-gray-100 transition">
+                    Ganjil
+                </a>
+
+                <a href="{{ route('product.index', ['msg' => 'genap']) }}"
+                   class="px-4 py-2 bg-white border border-gray-300 text-gray-700 text-sm font-medium rounded-md shadow hover:bg-gray-100 transition">
+                    Genap
+                </a>
+            </div>
         </div>
     </x-slot>
 
@@ -19,10 +26,10 @@
                 <div class="p-6 text-gray-900 space-y-4">
                     <p>{{ __("You're logged in!") }}</p>
 
-                    <!-- Tambahan link di dalam konten juga (opsional) -->
-                    <a href="{{ route('product.index') }}"
+                    <!-- Link tambahan di dalam konten -->
+                    <a href="{{ route('product.index', ['msg' => 'ganjil']) }}"
                        class="inline-block text-indigo-600 font-semibold hover:underline">
-                        Pergi ke halaman produk →
+                        Pergi ke halaman produk ganjil →
                     </a>
                 </div>
             </div>

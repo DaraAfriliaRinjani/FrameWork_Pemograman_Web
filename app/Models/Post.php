@@ -11,4 +11,10 @@ class Post extends Model
 
     // Kalau mau mengatur field yang boleh diisi
     protected $fillable = ['title', 'content'];
+
+    // Binding pakai slug, bukan id
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }
